@@ -1,7 +1,20 @@
 document.getElementById('myForm').addEventListener('submit', saveBookmark);
 
 function saveBookmark(e){
-    console.log('se toimii lol xd');
+    var siteUrl = document.getElementById('siteUrl').value;
+
+    var bookmark = {
+        name: siteName,
+        url: siteUrl
+    }
+
+    if(localStorage.getItem('bookmarks') === null){
+
+        var bookmarks = [];
+
+        bookmarks.push(bookmark);
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    }
 
     e.preventDefault();
 }
