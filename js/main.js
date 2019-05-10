@@ -26,7 +26,7 @@ function saveBookmark(e){
     e.preventDefault();
 }
 
-    function fetchartistit(){
+    function haeArtistit(){
         var artistit = JSON.parse(localStorage.getItem('artistit'));
 
     var artistitResults = document.getElementById('artistitResults');
@@ -34,7 +34,5 @@ function saveBookmark(e){
     artistitResults.innerHTML = '';
     for(var i = 0; i < artistit.length; i++){
         var voting = artistit[i].voting;
-
     }
-
 }
