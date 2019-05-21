@@ -29,7 +29,7 @@ function saveBookmark(e){
     function haeArtistit(){
         var artistit = JSON.parse(localStorage.getItem('artistit'));
 
-    var artistitResults = document.getElementById('artistitResults');
+    var artistVote = document.getElementById('artistVote');
 
     artistitResults.innerHTML = '';
     for(var i = 0; i < artistit.length; i++){
